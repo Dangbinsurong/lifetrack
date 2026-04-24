@@ -1,0 +1,91 @@
+# LifeTrack — персональный менеджер задач и привычек
+
+LifeTrack — консольное приложение на Python для управления задачами и отслеживания привычек.
+
+## Возможности
+
+- создание, просмотр, редактирование, выполнение и удаление задач;
+- фильтрация задач по статусу, категории и приоритету;
+- создание привычек;
+- фиксация выполнения привычек по датам;
+- статистика привычек за 7 и 30 дней;
+- консольная визуализация прогресса;
+- хранение данных в SQLite;
+- экспорт данных в JSON;
+- экспорт данных в ZIP-архив с JSON-дампом и копией базы;
+- импорт данных из ZIP-архива;
+- автоматическое резервное копирование базы;
+- загрузка настроек из `.env`;
+- логирование в `app.log`;
+- обработка ошибок через `try...except`.
+
+## Установка
+
+1. Установите Python 3.10 или новее.
+2. Скачайте проект или клонируйте репозиторий.
+3. Создайте виртуальное окружение:
+
+```bash
+python -m venv venv
+```
+
+4. Активируйте его:
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Linux/macOS:
+
+```bash
+source venv/bin/activate
+```
+
+5. Установите зависимости:
+
+```bash
+pip install -r requirements.txt
+```
+
+6. Создайте файл `.env` на основе `.env.example`:
+
+```bash
+DB_PATH=data/lifetrack.sqlite
+```
+
+7. Запустите приложение:
+
+```bash
+python src/main.py
+```
+
+## Структура проекта
+
+```text
+LifeTrack/
+├── src/
+│   ├── main.py
+│   ├── config.py
+│   ├── logger_setup.py
+│   ├── database.py
+│   ├── tasks.py
+│   ├── habits.py
+│   └── data_manager.py
+├── README.md
+├── requirements.txt
+├── .gitignore
+└── .env.example
+```
+
+## Git Workflow
+
+Рекомендуемые ветки:
+
+- `feature/task-management`
+- `feature/habit-tracker`
+- `feature/data-management`
+- `feature/docs`
+
+Каждая функциональность должна оформляться через Pull Request в ветку `main`.

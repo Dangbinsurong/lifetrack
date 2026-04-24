@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Project files
+*.sqlite
+*.sqlite3
+.env
+backups/
+exports/
+app.log
+
+# IDE
+.idea/
+.vscode/
